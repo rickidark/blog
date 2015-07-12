@@ -1,0 +1,282 @@
+/*
+ * Globals
+ */
+
+body {
+  font-family: 'Open Sans',  "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #555;
+  font-weight: 300;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+h2{
+
+font-family: 'Open Sans',  "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 21px;
+line-height: 1.2em;
+font-weight: 400;
+color: 555;
+}
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/*navbar*/
+.navbar-brand{
+
+  font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.9em;
+    text-transform:lowercase;
+    font-weight: 100;
+    letter-spacing: 0px;
+
+}
+
+.navbar-default .navbar-brand {
+  color: #555;
+}
+
+/* Por cada etiqueta a, que este dentro de una lista(li) que este dentro de la clase .navbar-nav que este 
+dentro del div con la clase .navbar-default darle los siguientes atributos, si y solo si, existe un elemento 
+html 'a' y existe un elemento inmediato 'li'. Si existe otro elemento o etiqueta entre esos dos, no
+se cumple la condición.
+
+.navbar-default .navbar-nav>li>a {
+  color: #555;
+}
+*/
+
+.navbar-default .navbar-nav>li>a {
+  font-weight: 700;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li.active>a{
+  border-bottom: 3px solid;
+  padding-bottom: 12px;
+}
+
+/** SOLO SE CUMPLE EL ESTILO SI LA ETIQUETA A ES INMEDIATA A LI, ES DECIR, 
+SI NO HAY OTRA ETIQUETA ENTRE ELLOS, COMO <P> O <UL> **/
+/**FIRST-CHILD SIGNIFICA QUE SOLO EL PRIMER LI VA A TENER 
+EFECTO CON ESTE ESTILO **/
+.navbar-default .navbar-nav>li:first-child>a, .navbar-default .navbar-nav>li:first-child>a:hover, .navbar-default .navbar-nav>li:first-child>a:focus {
+  color: #e74c3c;
+}
+
+.navbar-default .navbar-nav>li:nth-child(2)>a, .navbar-default .navbar-nav>li:nth-child(2)>a:hover, .navbar-default .navbar-nav>li:nth-child(2)>a:focus {
+  color: #40d47e;
+}
+
+.navbar-default .navbar-nav>li:nth-child(3)>a, .navbar-default .navbar-nav>li:nth-child(3)>a:hover, .navbar-default .navbar-nav>li:nth-child(3)>a:focus   {
+  color: #3498db;
+}
+
+.navbar-default .navbar-nav>li:nth-child(4)>a, .navbar-default .navbar-nav>li:nth-child(4)>a:hover, .navbar-default .navbar-nav>li:nth-child(4)>a:focus  {
+  color: #f39c12;
+} 
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+background-color: #f8f8f8;
+}
+ 
+
+/*PÁGINA PARA EL BLOG*/
+
+#blog-page {
+
+padding-top: 30px;
+}
+
+/*No se utiliza un pseudo element en h2.blog-post-title porque 
+no hay otra etiqueta h2, no sucede otra vez 
+#blog-page .blog-post:first-child  h2.blog-post-title{
+
+color: #e74c3c;
+
+}
+
+#blog-page .blog-post:nth-child(2)  h2.blog-post-title{
+
+color: #2ecc71;
+
+}
+*/
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.blog-main img{
+  max-width:100%;
+  margin-bottom: 30px;  
+
+
+}
+
+.blog-sidebar {
+  padding-left: 30px;
+}
+
+
+/* Sidebar modules for boxing content */
+
+#suscribe-box {
+
+  padding: 15px 20px;
+  font-size: 15px;
+}
+
+#suscribe-box h4{
+  font-family: 'Roboto Condensed';
+  font-size: 20px;
+  color: #777;
+  text-align: justify;
+}
+
+#suscribe-box p{
+
+  line-height: 1.5em;
+  text-rendering: optimizeLegibility;
+}
+
+#suscribe-box .form-group{
+  margin-top: 15px;
+}
+
+#suscribe-box .btn-warning{
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #f39c12;
+
+}
+
+#suscribe-box .btn-warning:hover{
+  background-color: #f0ad4e;
+}
+
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border: 5px dashed #2ecc71;
+}
+
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.blog-post-title {
+ margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.blog-post-title a{
+
+color: #555;
+
+}
+
+.blog-post-title a:hover{
+
+color: #2a6496;
+
+}
+
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #888;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.blog-post-meta .btn-danger{
+  background-color: #e74c3c;
+  padding: 3px 5px;
+  margin-right: 5px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.blog-post-meta .btn-danger:hover{
+  background-color: #d2322d;
+}
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/*Site-wide styling */
+
+.center{
+
+  text-align: center;
+}
